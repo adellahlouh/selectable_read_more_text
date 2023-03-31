@@ -1,6 +1,3 @@
-<!--
--->
-
 SelectableReadMoreText is a Flutter package that provides a customizable "read more" button for selectable text that is longer than four lines. This package allows developers to easily add a read more feature to their Flutter apps, while also making the body text selectable.
 
 With SelectableReadMoreText, users can expand the text to see more content or collapse it to see less, making it ideal for displaying long blocks of text that users may not want to read in their entirety. The package is highly customizable, allowing developers to adjust the read more button's style, text, and position to fit their app's design.
