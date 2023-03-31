@@ -3,7 +3,7 @@ library selectable_read_more_text;
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import 'enumerations/enumerations.dart';
+import '../enumerations/enumerations.dart';
 
 
 class SelectableReadMoreText extends StatefulWidget {
@@ -314,13 +314,21 @@ class SelectableReadMoreTextState extends State<SelectableReadMoreText> {
     ValueChanged<String>? onPressed,
     required List<TextSpan> children,
   }) {
+    // RegExp exp = new RegExp(r'(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+');
+    // Iterable<RegExpMatch> matches = exp.allMatches(text);
+    //
+    // for (var match in matches) {
+    //   print(text.substring(match.start, match.end));
+    // }
     final RegExp exp =
     RegExp(r'(?:(?:https?|ftp):\/\/)?[\w/\-?=%.]+\.[\w/\-?=%.]+');
 
     final List<TextSpan> contents = [];
 
+
     while (exp.hasMatch(data)) {
-      final match = exp.firstMatch(data);
+      debugPrint('sssss');
+      RegExpMatch? match = exp.firstMatch(data);
 
       final firstTextPart = data.substring(0, match!.start);
       final linkTextPart = data.substring(match.start, match.end);
