@@ -1,0 +1,4 @@
+enum TrimType {
+  Length,
+  Line,
+}
